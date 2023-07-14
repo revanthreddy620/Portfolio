@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" type="text/css" href="sty.css">
+    </head>
+    <body>
+        <header class="header">
+        <div>
+            <img src="profile .png" alt="" class="profile">
+            <a href="#" class="logo">Portfolio</a>
+            <i class='bx bx-menu' id="menu-icon"></i>
+        </div>
+            <nav class="navbar">
+                <a href="#Home" class="active">Home</a>
+                <a href="#About">About</a>
+                <a href="#Services">KeyAreas</a>
+                <a href="#Projects">Projects</a>
+                <a href="#Contact">Contact</a>
+            </nav> 
+        </header>
+        <section class="home" id="Home">
+            <div class="home-content">
+                <p>Student</p>
+                <h3>Hi, I'M</h3>
+                <h1><span>Revanth Reddy R</span></h1>
+                <h3> from Hyderabad</h3> 
+                <div class="social-media">  
+                    <a href="https://github.com/revanthreddy620"><i class='bx bxl-github' ></i></a>
+                    <a href="https://www.linkedin.com/in/revanth-reddy-ramavaram-296764207/"><i class='bx bxl-linkedin' ></i></a>
+                </div>
+            </div>
+            <div class="home-img">
+                <img src="Revanth.JPG" alt="Revanth">
+            </div>
+        </section>
+        <section class="about" id="About">
+            <div class="about-img">
+                <img src="profile .png" alt="about img">
+            </div>
+            <div class="about-content">
+                <h2 class="heading">About <span>Me</span></h2>
+                <h3>Frontend Developer</h3>
+                <p>Hello, I'm Revanth, a committed and driven person pursuing a B-Tech in Computer Science.
+                    I am enthusiastic to learn about and succeed in the field of technology, and I currently have a CGPA of 8.2. 
+                    My areas of competence are web development, computer vision, and languages like Python and Java.</p>
+            </div>
+        </section>
+        <section class="" id="Services">
+            <h2 class="heading">Areas of <span>Intrests</span></h2>
+    <div class="services-container">
+        <div class="services-box">
+            <i class='bx bx-code-alt' ></i>
+            <h3>Web Development</h3>
+            <p>Creating unique and tailored websites from scratch to meet clients specific needs and brand identity.</p>
+        </div>
+        <div class="services-box">
+            <i class='bx bx-code-alt' ></i>
+            <h3>Machine Learning</h3>
+            <p>The pursuit of machine learning research and development</p>
+        </div>
+        <div class="services-box">
+            <i class='bx bx-code-alt' ></i>
+            <h3>Python Projects</h3>
+            <p>Building Python scripts to extract data from websites or APIs, collecting valuable information for clients' specific needs.</p>
+        </div>
+    </div>
+        </section>
+        <section class="projects" id="Projects">
+            <h2 class="about-projects">My <span>Projects</span> </h2>
+            <div class="projects-container">
+                <div class="project">
+                    <h1 class="pname">DIGBOOK </h1>
+                    <p>Developed a web application which suggests the top 50 books based on ratings and recommend similar books based on user input using HTML,CSS,Python.</p>
+                    <a href="https://github.com/revanthreddy620/Book-Recommendation-Website" class="btn">Read More</a>
+                </div>
+                <div class="project">
+                    <h1 class="pname">Air Canvas</h1>
+                    <p>Developed a programme based on Open CV, Python, and Mediapipe that enables users to write using a web camera. </p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="Contact">
+            <h1><span>Contact</span> Me</h1>
+            <div class="container">
+                <form name="submit-to-google-sheet">
+                  <input type="text" name="name" placeholder="Your Name" required>
+                  <input type="email" name="email" placeholder="Your Email" required>
+                  <textarea name="message" placeholder="Your Message" ></textarea>
+                  <button type="submit">Send Message</button>
+                </form>
+              </div>
+              <button class="btn" id="send-mail"><a href="mailto:ramavaramrevanth620@gmail.com">Send Mail</a></button>
+        </section>
+         <footer class="footer">
+            <p class="footer__title">Portfolio</p>
+            <div class="footer__social">
+                <a href="https://github.com/revanthreddy620" class="footer__icon"><i class='bx bxl-github' ></i></a>
+                <a href="" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.linkedin.com/in/revanth-reddy-ramavaram-296764207/" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </footer>
+    <script src="scri.js"></script>
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyA10tZNECYCKqY3c6UVk8se0IeV2NlT7SnCE7Yhesdk9_zQJdeWNOnperprDPk4zY/exec'
+        const form = document.forms['submit-to-google-sheet']
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+      </body>
+    </html>
